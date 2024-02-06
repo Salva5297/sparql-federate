@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sparql-federate:
+    image: salva5297/sparql-federate:latest
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./logo.jpg:/usr/src/app/static/logo/logo.jpg
+      - ./config.js:/usr/src/app/static/js/config.js
+    ports:
+      - "8080:5005"

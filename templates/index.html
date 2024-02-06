@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SPARQL FEDERATE ENGINE</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Base imports -->
+		<script src="{{ url_for('static',filename='/js/jquery/jquery-3.4.0.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='/js/bootstrap/bootstrap.min.js') }}"></script>
+		<link
+			href="{{ url_for('static',filename='/css/bootstrap/bootstrap.min.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<link
+			href="{{ url_for('static',filename='/css/helio.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<!-- Template imports -->
+
+		<link
+			href="{{ url_for('static',filename='/css/yasr/codeMirror/codemirror.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="{{ url_for('static',filename='/js/yasr/codeMirror/codemirror.js') }}"></script>
+
+		<link
+			href="{{ url_for('static',filename='/css/yasr/pivot/pivot.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="{{ url_for('static',filename='/js/yasr/pivot/pivot.min.js') }}"></script>
+
+		<link
+			href="{{ url_for('static',filename='/css/yasr/yasr.min.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="{{ url_for('static',filename='/css/yasqe/yasqe.min.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<script src="{{ url_for('static',filename='/js/yasr/yasr.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='/js/yasr/yasr.bundled.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='/js/yasqe/yasqe.bundled.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='/js/yasqe/yasqe.min.js') }}"></script>
+
+		<!-- Custom imports -->
+		<link
+			href="{{ url_for('static',filename='/css/yasr/dataTables/jquery.dataTables.min.css') }}"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<script src="{{ url_for('static',filename='/js/yasr/dataTables/jquery.dataTables.min.js') }}"></script>
+		
+	</head>
+	<body>
+		<!-- Page Header -->
+        <!-- Page Content -->
+		<main role="main">
+			<div class="container">
+				<center>
+				<a onclick="func();"><img src="{{ url_for('static',filename='/logo/logo.jpg') }}" width="500" alt="COGITO logo" class="img-rounded center"></a>
+				<!-- <table class="tb" id="members">
+					<tr>
+					  <th colspan="2">Endpoints</th>
+					</tr>
+					<tr>
+					  <td>Construction Knowledge Graph: https://data.cogito.iot.linkeddata.es/sparql</td>
+					  <td>Digital Twin Platform Knowledge Graph: https://data.cogito.iot.linkeddata.es/tdd/api/search/sparql</td>
+					</tr>
+				  </table> -->
+				</center>
+			</div>
+		
+			<p></p>
+			<div class="container">	
+				<div class="row">
+           			<div class="col-md-12">
+						<div id="yasqe-div"></div>
+						<div id="yasr-div"></div>
+						<!-- <script src="{{ url_for('static',filename='/js/sparql-yasr.js') }}"></script> -->
+					</div>
+				</div>
+			</div>	
+
+			<p>&nbsp;</p> 
+			<p></p> 
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+					Developed by <a href="http://oeg-upm.net" target="_blank">Ontology Engineering Group</a>
+					<br>
+					Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+					Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+					<br>
+					Latest revision May, 2023
+					<br>
+					<p>&copy; Ontology Engineering Group</p>
+					</div>
+					<div class="col-md-2">
+					<a href="https://oeg.fi.upm.es/" target="_blank"><img src="{{ url_for('static',filename='/logo/logo.gif') }}" alt="OEG logo" class="img-rounded"
+						class="img-responsive" width="30%" /></a>
+		
+					<a href="http://fi.upm.es/" target="_blank"><img src="{{ url_for('static',filename='/logo/fiLogo.png') }}" alt="FI logo" class="img-rounded"
+						class="img-responsive" width="30%" /></a>
+		
+					<a href="https://www.upm.es/" target="_blank"><img src="{{ url_for('static',filename='/logo/upmlogo.png') }}" alt="UPM logo" class="img-rounded"
+						class="img-responsive" width="30%" /></a>
+					</div>
+				</div>
+			</div>
+		
+			<script src="{{ url_for('static',filename='/js/main.js') }}"></script>
+			<script src="{{ url_for('static',filename='/js/config.js') }}"></script>
+			<script>
+				function func(){
+					if(url){
+						window.location.href = url;
+					}
+					else{
+						window.location.href = "/";
+					}
+				}
+			</script>
+		</main>
+		
+		
+	</body>
+</html>
